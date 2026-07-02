@@ -32,6 +32,7 @@ begin
             format = 'csv',
             firstrow = 2,
             fieldterminator = ',',
+            keepnulls,
             tablock
         );
         print '>> Load duration: ' + cast(DATEDIFF(MILLISECOND, @start_time, SYSDATETIME()) as varchar(20)) + ' ms';
@@ -47,6 +48,7 @@ begin
             format = 'csv',
             firstrow = 2,
             fieldterminator = ',',
+            keepnulls,
             tablock
         );
         print '>> Load duration: ' + cast(DATEDIFF(MILLISECOND, @start_time, SYSDATETIME()) as varchar(20)) + ' ms';
@@ -62,6 +64,7 @@ begin
             format = 'csv',
             firstrow = 2,
             fieldterminator = ',',
+            keepnulls,
             tablock
         );
         print '>> Load duration: ' + cast(DATEDIFF(MILLISECOND, @start_time, SYSDATETIME()) as varchar(20)) + ' ms';
@@ -80,6 +83,7 @@ begin
             format = 'csv',
             firstrow = 2,
             fieldterminator = ',',
+            keepnulls,
             tablock
         );
         print '>> Load duration: ' + cast(DATEDIFF(MILLISECOND, @start_time, SYSDATETIME()) as varchar(20)) + ' ms';
@@ -95,6 +99,7 @@ begin
             format = 'csv',
             firstrow = 2,
             fieldterminator = ',',
+            keepnulls,
             tablock
         );
         print '>> Load duration: ' + cast(DATEDIFF(MILLISECOND, @start_time, SYSDATETIME()) as varchar(20)) + ' ms';
@@ -110,6 +115,7 @@ begin
             format = 'csv',
             firstrow = 2,
             fieldterminator = ',',
+            keepnulls,
             tablock
         );
         print '>> Load duration: ' + cast(DATEDIFF(MILLISECOND, @start_time, SYSDATETIME()) as varchar(20)) + ' ms';
