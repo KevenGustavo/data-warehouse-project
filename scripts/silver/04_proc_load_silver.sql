@@ -1,9 +1,19 @@
 /*
-=============================================================
-Create procedure to Load Data into Silve Layer
-=============================================================
+===============================================================================
+Stored Procedure: Load Silver Layer (Bronze -> Silver)
+===============================================================================
 Script Purpose:
-    This script is designed to load data into the silver layer of the DataWarehouse database.
+    This procedure performs the ETL (Extract, Transform, Load) process to 
+    populate the 'silver' schema, cleansing and standardizing raw data from 
+    the 'bronze' schema.
+
+    Transformations Applied:
+    - Data Cleansing: Trimming whitespace, removing carriage returns.
+    - Data Standardization: Mapping coded values to descriptive names.
+    - Deduplication: Keeping the most recent record using window functions.
+    - Handling Missing/Invalid Data: Coalescing NULLs, recalculating metrics.
+    - Slowly Changing Dimensions (SCD): Calculating end dates for history tracking.
+===============================================================================
 */
 
 create or alter procedure silver.load_silver_data as
