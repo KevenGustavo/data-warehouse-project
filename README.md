@@ -73,12 +73,15 @@ docker-compose up \-d
 ```
 
 **3\. Set up credentials**  
-Rename .env.example to .env and fill in the database password defined in your docker-compose file.
+Rename **.env.example** to **.env** and fill in the database password defined in your docker-compose file.
 
 **4\. Initialize the Database (One-time Setup)**  
-Execute the scripts in scripts/ to create the database, schemas, tables, and views. You can use Azure Data Studio, VS Code, or DBeaver.  
+Execute the scripts in **scripts/** to create the database, schemas, tables, and views. You can use Azure Data Studio, VS Code, or DBeaver.  
 
-**5\. Run the ETL Pipeline**  
+**5\. Install System Prerequisites**  
+The Python orchestrator uses pyodbc to connect to the database. You must install the **ODBC Driver 17 for SQL Server** on your local operating system before running the pipeline.
+
+**6\. Run the ETL Pipeline**  
 Install the Python driver and execute the orchestrator to process the data from Bronze to Silver.
 
 ```Bash  
